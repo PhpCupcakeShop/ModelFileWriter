@@ -64,7 +64,7 @@ rem Loop through the properties and add their metadata
 for /l %%i in (1,1,%numProperties%) do (
 echo         '!propertyName_%%i!' =^> ['type' =^> '!Type_%%i!', >> temp.txt
 if defined Length_%%i (
-    echo 'length' =^> !Length_%%i! >> temp.txt
+    echo 'length' =^> !Length_%%i!, >> temp.txt
 ) else (
     echo //Variable !Length_%%i! is not defined >> temp.txt
 )
